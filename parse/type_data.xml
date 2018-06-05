@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Types>
+    <Type id="0" name="OZK + A INICIÁLNÍ NEBO CIZÍ"/>
+    <Type id="1" name="Preventivní prohlídka"/>
+    <Type id="2" name="OZK + A Recall"/>
+    <Type id="3" name="Výplň"/>
+    <Type id="4" name="Endodoncie"/>
+    <Type id="5" name="Protetika"/>
+    <Type id="6" name="Předání protetiky"/>
+    <Type id="7" name="Extrakce"/>
+    <Type id="8" name="Bělení"/>
+    <Type id="9" name="DH + PP"/>
+    <Type id="R" name="Rezervace normální"/>
+    <Type id="S" name="Speciální rezervace"/>
+    <Type id="A" name="Akutní rezervace"/>
+    <Type id="V" name="Vstupní prohlídka"/>
+    <Type id="K" name="Kontrola"/>
+    <Type id="X" name="Nepřítomen"/>
+    <Type id="I" name="Internet"/>
+    <Type id="B" name="Blokace"/>
+    <Type id="M" name="Pauza "/>
+</Types>

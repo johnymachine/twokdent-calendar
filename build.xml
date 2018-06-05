@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project twokdent-calendar with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR file Export Wizard-->
+    <!--ANT 1.7 is required-->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}"/>
+    <target name="create_run_jar">
+    	<!-- <delete dir="dist"/> -->
+    	<jar destfile="${dir.jarfile}/calendar.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="cz.twokdent.calendar.main.Main"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ commons-net-3.6.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="${dir.jarfile}/bin"/>
+            <zipfileset dir="${dir.jarfile}/lib/commons-net-3.6" includes="commons-net-3.6.jar"/>
+        </jar>
+    	<copy file="calendar.jar" todir="dist/Gabriel/Calendar"/>
+	<copy file="run.ps1" todir="dist/Gabriel"/>
+    	<copy todir="dist/Gabriel/Calendar/scripts">
+    	    <fileset dir="scripts"/>
+    	</copy>
+    	<copy todir="dist/Gabriel/Calendar/export">
+    		<fileset dir="export"/>
+    	</copy>
+    	<copy todir="dist/Gabriel/Calendar/generate">
+    		<fileset dir="generate"/>
+    	</copy>
+    	<copy todir="dist/Gabriel/Calendar/config">
+    		<fileset dir="config"/>
+    	</copy>
+    	<copy todir="dist/Gabriel/Calendar/parse">
+    		<fileset dir="parse"/>
+    	</copy>
+    </target>
+</project>
